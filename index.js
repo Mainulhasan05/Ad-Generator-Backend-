@@ -55,7 +55,9 @@ function removeHtmlAndCss(htmlString) {
     return strippedCss;
   }
 
-
+app.get("/hello",(req,res)=>{
+  res.send("Response From Backend")
+})
 app.get("/loaddata",async(req,res)=>{
   let result=await client.connect();
   let db=result.db("ShoppingCorner")
